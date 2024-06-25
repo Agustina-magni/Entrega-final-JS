@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras Mejorado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+            position: relative;
+            z-index: 1;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url(images/fondo2.jpg); /* URL de la imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9; /* Opacidad de la imagen de fondo */
+            z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+        }
+        .product {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .product img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .link-btn {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+        .link-btn:hover {
+            background-color: #007BB5;
+        }
+    </style>
+</head>
+<body>
+    <h1>PRODUCTOS</h1>
+    <div id="products">
+        <div class="product">
+            <img src="images/foto1.jpg" alt="Producto 1">
+            <span>Mini carrot Cake - $10</span>
+            <button class="btn" onclick="addToCart('Producto 1', 10, 'images/foto1.jpg')">Agregar al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/foto2.jpg" alt="Producto 2">
+            <span>Mini Lemon pie - $20</span>
+            <button class="btn" onclick="addToCart('Producto 2', 20, 'images/foto2.jpg')">Agregar al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/foto3.jpg" alt="Producto 3">
+            <span>Tarta toffee - $30</span>
+            <button class="btn" onclick="addToCart('Producto 3', 30, 'images/foto3.jpg')">Agregar al carrito</button>
+        </div>
+    </div>
+    <a class="link-btn" href="carrito.html">Ver Carrito</a>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

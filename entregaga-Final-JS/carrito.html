@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+            position: relative;
+            z-index: 1;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url(images/fondo2.jpg); /* URL de la imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9; /* Opacidad de la imagen de fondo */
+            z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+        }
+        .cart {
+            margin-top: 40px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .cart-item img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .remove-btn:hover {
+            background-color: darkred;
+        }
+        .link-btn {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+        .link-btn:hover {
+            background-color: #007BB5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrito</h1>
+    <div class="cart">
+        <h2>Carrito</h2>
+        <div id="cart-items"></div>
+        <div id="total"></div>
+    </div>
+    <a class="link-btn" href="index.html">Seguir Comprando</a>
+    <script src="script.js"></script>
+</body>
+</html>
+
